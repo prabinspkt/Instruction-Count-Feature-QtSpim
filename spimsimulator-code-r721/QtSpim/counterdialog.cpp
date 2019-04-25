@@ -27,14 +27,12 @@ CounterDialog::CounterDialog(QWidget *parent) :
         QTextStream(stdout) << "is found "<< it->second << endl;
 
         QLabel *instruction = new QLabel(this);
-        instruction->setText(QString::fromStdString(it->first)+":<br>");
+        instruction->setText(QString::fromStdString(it->first)+" : ");
         instruction->setMargin(margin_value);
         QLabel *count = new QLabel(this);
         count->setMargin(margin_value);
-        count->setIndent(90);
+        count->setIndent(80);
         count->setNum(it->second);
-        QLabel *new_line = new QLabel(this);
-        new_line->setText("\n\n");
         it++;
         margin_value += 20;
         }
