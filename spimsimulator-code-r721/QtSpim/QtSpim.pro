@@ -66,7 +66,8 @@ SOURCES += main.cpp\
         ../CPU/sym-tbl.cpp\
         ../CPU/syscall.cpp\
         spim_support.cpp \
-    counterdialog.cpp
+    counterdialog.cpp \
+    instruction_count.cpp
 
 
 HEADERS  += spimview.h\
@@ -76,7 +77,8 @@ HEADERS  += spimview.h\
         spim_settings.h\
         settablecheckbox.h\
         console.h \
-    counterdialog.h
+    counterdialog.h \
+    instruction_count.h
 
 
 FORMS    += spimview.ui\

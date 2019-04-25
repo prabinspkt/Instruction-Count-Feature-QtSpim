@@ -61,6 +61,7 @@
 #include "parser_yacc.h"
 #include "syscall.h"
 #include "run.h"
+#include "instruction_count.h"
 
 bool force_break = false;	/* For the execution env. to force an execution break */
 
@@ -258,6 +259,8 @@ run_spim (mem_addr initial_PC, int steps_to_run, bool display)
 
 	  exception_occurred = 0;
 	  inst = read_mem_inst (PC);
+      instruction_count[OPCODE(inst)]++;
+
 	  if (exception_occurred) /* In reading instruction */
 	    {
 	      exception_occurred = 0;
