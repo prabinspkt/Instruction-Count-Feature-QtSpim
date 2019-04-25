@@ -543,6 +543,10 @@
    </property>
   </action>
   <action name="actionRuntime_Statistics">
+   <property name="icon">
+    <iconset resource="windows_images.qrc">
+     <normaloff>:/windows_images/runtime_statistics.png</normaloff>:/windows_images/runtime_statistics.png</iconset>
+   </property>
    <property name="text">
     <string>Runtime Statistics</string>
    </property>
