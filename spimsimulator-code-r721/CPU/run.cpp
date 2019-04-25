@@ -260,6 +260,7 @@ run_spim (mem_addr initial_PC, int steps_to_run, bool display)
 	  exception_occurred = 0;
 	  inst = read_mem_inst (PC);
       instruction_count[OPCODE(inst)]++;
+      cycle_counter++;
 
 	  if (exception_occurred) /* In reading instruction */
 	    {

@@ -5,6 +5,8 @@ std::map<int, int> instruction_count = {{ 258 , 0 },{ 259 , 0 },{ 260 , 0 },{ 26
 
 std::map<std::string, int> final_count = {};
 
+int cycle_counter = 0;
+
 std::map<int, std::string> op_to_inst = {
     { Y_ADD_OP , " add " } ,
     { Y_ADDI_OP , " addi " } ,

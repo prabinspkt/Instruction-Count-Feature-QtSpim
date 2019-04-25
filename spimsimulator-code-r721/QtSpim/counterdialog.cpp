@@ -26,8 +26,6 @@ CounterDialog::CounterDialog(QWidget *parent) :
     //int margin_value = 20;
     string break_line = "<br>";
     while (it != instruction_count.end()){
-        QTextStream(stdout) << QString::fromStdString(it->first);
-        QTextStream(stdout) << "is found "<< it->second << endl;
 
         QLabel *instruction = new QLabel(this);
         instruction->setText(QString::fromStdString(break_line)+QString::fromStdString(it->first)+": <br>");
@@ -37,6 +35,8 @@ CounterDialog::CounterDialog(QWidget *parent) :
         break_line+= "<br>";
         it++;
         }
+    QLabel *cycle_label = new QLabel(this);
+    cycle_label->setText(QString::fromStdString(break_line)+"The number of total cycle count is "+ QString::fromStdString(to_string(cycle_counter))+".");
 }
 
 CounterDialog::~CounterDialog()
