@@ -33,6 +33,7 @@
 
 #include "spimview.h"
 #include "ui_spimview.h"
+#include "counterdialog.h"
 
 #include <QStringBuilder>
 #define QT_USE_FAST_CONCATENATION
@@ -274,4 +275,11 @@ void SpimView::Error(QString message, bool fatal)
             force_break = true;
         }
     }
+}
+
+void SpimView::on_actionRuntime_Statistics_triggered()
+{
+    CounterDialog counterDialog;
+    counterDialog.setModal(true);
+    counterDialog.exec();
 }

@@ -65,7 +65,8 @@ SOURCES += main.cpp\
         ../CPU/string-stream.cpp\
         ../CPU/sym-tbl.cpp\
         ../CPU/syscall.cpp\
-        spim_support.cpp
+        spim_support.cpp \
+    counterdialog.cpp
 
 
 HEADERS  += spimview.h\
@@ -74,7 +75,8 @@ HEADERS  += spimview.h\
         datatextedit.h\
         spim_settings.h\
         settablecheckbox.h\
-        console.h
+        console.h \
+    counterdialog.h
 
 
 FORMS    += spimview.ui\
@@ -83,7 +85,8 @@ FORMS    += spimview.ui\
         runparams.ui\
         settings.ui\
         changevalue.ui \
-        breakpoint.ui
+        breakpoint.ui \
+    counterdialog.ui
 
 
 INCLUDEPATH = ../CPU ../spim ../QtSpim

@@ -289,6 +289,8 @@ Q_OBJECT
     void continueBreakpoint();
     void singleStepBreakpoint();
     void abortBreakpoint();
+private slots:
+    void on_actionRuntime_Statistics_triggered();
 };
 
 extern SpimView* Window;
