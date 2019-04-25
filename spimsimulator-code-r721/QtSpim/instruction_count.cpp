@@ -409,3 +409,12 @@ std::map<std::string, int> ReturnFinalCount()
        }
     return final_count;
 }
+
+void ClearOnReinitialize() {
+    std::map<int, int>::iterator clear_iter = instruction_count.begin();
+    for (int i = 258; i <= 647; i++) {
+        instruction_count.at(i) = 0;
+    }
+
+    final_count = {};
+}

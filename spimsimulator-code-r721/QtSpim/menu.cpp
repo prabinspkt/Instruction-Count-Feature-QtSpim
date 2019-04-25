@@ -39,6 +39,7 @@
 #include "ui_breakpoint.h"
 #include "spim_settings.h"
 #include "version.h"
+#include "instruction_count.h"
 
 
 #include <QStringBuilder>
@@ -239,6 +240,8 @@ void SpimView::sim_ReinitializeSimulator()
     InitializeWorld();
     SpimConsole->Clear();
     initStack();
+
+    ClearOnReinitialize();
 
     SetOutputColor("green");
     write_startup_message();
