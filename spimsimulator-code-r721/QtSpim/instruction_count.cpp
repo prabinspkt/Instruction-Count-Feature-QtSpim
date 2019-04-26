@@ -425,6 +425,6 @@ void ClearOnReinitialize() {
     for (int i = 258; i <= 647; i++) {
         instruction_count.at(i) = 0;
     }
-
     final_count = {};
+    cycle_counter = 0;
 }
